@@ -14,9 +14,9 @@ const OpenAI = require("openai");
 
 log.info("bot", "online");
 
-const PORT = 8080;
+const PORT = 8083;
 let isAppState = true;
-const openAiKey = "sk-";
+const openAiKey = "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";
 
 http.createServer(function (req, res) {
     res.writeHead(200, { "Content-Type": "application/json" });
