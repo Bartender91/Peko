@@ -82,7 +82,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
             isAppState = false;
         }
 
-        if (event.threadID != "2583856894982516") {
+        if (event.threadID != "6548761728576857") {
             return;
         }
 
