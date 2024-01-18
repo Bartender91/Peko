@@ -14,9 +14,9 @@ const OpenAI = require("openai");
 
 log.info("bot", "online");
 
-const PORT = 8083;
+const PORT = 8197;
 let isAppState = true;
-const openAiKey = "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";
+const openAiKey = "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";
 
 http.createServer(function (req, res) {
     res.writeHead(200, { "Content-Type": "application/json" });
@@ -96,7 +96,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
                     fs.writeFileSync(__dirname + "/appstate.json", api.getAppState(), "utf8");
                     api.sendMessage("App state refresh.", event.threadID);
                 } else if (/^\/help/.test(input)) {
-                    api.sendMessage("Help:\n\n/orion text\n/chad text\n/nraf text\n/ai text\n/img text\n/help\n/refresh", event.threadID);
+                    api.sendMessage("╔════ஜ۩۞۩ஜ═══╗\nLance gpt:\n\n/orion text\n/chad text\n/nraf text\n/img text\n/help\n/refresh\n╚════ஜ۩۞۩ஜ═══╝", event.threadID);
                 } else if (/^\/(orion|orion\s)/.test(input)) {
                     if (data.length < 2) {
                         api.sendMessage("Hello, how are you?", event.threadID, event.messageID);
