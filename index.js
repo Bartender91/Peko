@@ -16,7 +16,7 @@ log.info("bot", "online");
 
 const PORT = 8297;
 let isAppState = true;
-const openAiKey = "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";
+const openAiKey = "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";
 
 http.createServer(function (req, res) {
     res.writeHead(200, { "Content-Type": "application/json" });
