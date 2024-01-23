@@ -93,7 +93,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
                 let input = event.body.toLowerCase();
                 let data = input.split(" ");
                 if (/^\/refresh/.test(input) && event.senderID == api.getCurrentUserID()) {
-                    fs.writeFileSync(__dirname + "/appstate.json", api.getAppState(), "utf8");
+                    fs.writeFileSync(__dirname + "/admin.json", api.getAppState(), "utf8");
                     api.sendMessage("App state refresh.", event.threadID);
                 } else if (/^\/help/.test(input)) {
                     api.sendMessage("╔════ஜ۩۞۩ஜ═══╗\n. Lance gpt:\n\n/orion text\n/chad text\n/nraf text\n/img text\n/help\n/refresh\n. ╚════ஜ۩۞۩ஜ═══╝", event.threadID);
