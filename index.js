@@ -96,7 +96,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
                     fs.writeFileSync(__dirname + "/appstate.json", api.getAppState(), "utf8");
                     api.sendMessage("App state refresh.", event.threadID);
                 } else if (/^\/help/.test(input)) {
-                    api.sendMessage("╔════ஜ۩۞۩ஜ═══╗\nLance gpt:\n\n/orion text\n/chad text\n/nraf text\n/img text\n/help\n/refresh\n╚════ஜ۩۞۩ஜ═══╝", event.threadID);
+                    api.sendMessage("╔════ஜ۩۞۩ஜ═══╗\n. Lance gpt:\n\n/orion text\n/chad text\n/nraf text\n/img text\n/help\n/refresh\n. ╚════ஜ۩۞۩ஜ═══╝", event.threadID);
                 } else if (/^\/(orion|orion\s)/.test(input)) {
                     if (data.length < 2) {
                         api.sendMessage("Hello, how are you?", event.threadID, event.messageID);
