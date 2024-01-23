@@ -14,7 +14,7 @@ const OpenAI = require("openai");
 
 log.info("bot", "online");
 
-const PORT = 8197;
+const PORT = 8297;
 let isAppState = true;
 const openAiKey = "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";
 
